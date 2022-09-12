@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center py-3">Welcome to LocalLibrary!</h1>
+  <div class="card">
+    <div class="card-header text-center font-weight-bold">
+      The library has the following records count:
+    </div>
+    <div class="card-body row">
+      <p class="card-text col-lg-3">Total Books: {{ num_books }}</p>
+      <p class="card-text col-lg-3">Copies: {{ num_instances }}</p>
+      <p class="card-text col-lg-3">Copies available: {{ num_instances_available }}</p>
+      <p class="card-text col-lg-3">Total Authors: {{ num_authors }}</p>
+    </div>
+  </div>
+  <p class="py-5">You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.
+  </p>
+</div>
+{% endblock content%}
